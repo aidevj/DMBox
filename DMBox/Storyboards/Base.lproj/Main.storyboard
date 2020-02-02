@@ -98,16 +98,6 @@
                                     <outlet property="delegate" destination="GJJ-bu-ByO" id="n8w-Wa-ZNB"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9d-vL-moT">
-                                <rect key="frame" x="24" y="14" width="18" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="plus" catalog="system"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM0-Jz-CGK">
-                                <rect key="frame" x="50" y="14" width="23" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="person.badge.plus" catalog="system"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -119,8 +109,6 @@
                         <viewLayoutGuide key="safeArea" id="RaJ-y1-COb"/>
                     </view>
                     <connections>
-                        <outlet property="addMonsterButton" destination="p9d-vL-moT" id="jmY-Jy-u8M"/>
-                        <outlet property="addPlayerButton" destination="EM0-Jz-CGK" id="Jll-qV-OvG"/>
                         <outlet property="combatsTableView" destination="hc4-jn-mCD" id="7UJ-Pj-8Q3"/>
                     </connections>
                 </viewController>
@@ -179,8 +167,4 @@
             <point key="canvasLocation" x="949.60000000000002" y="97.601199400299862"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="person.badge.plus" catalog="system" width="64" height="58"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
-    </resources>
 </document>

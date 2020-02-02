@@ -14,11 +14,12 @@ class CombatViewController: UIViewController {
     @IBOutlet weak var addPlayerButton: UIButton!
     @IBOutlet weak var combatsTableView: UITableView!
     
-    var combatList: [Combat] = []
+    //var combatList: [Combat] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupTable()
     }
     
     // MARK: Setup Functions
@@ -30,5 +31,29 @@ class CombatViewController: UIViewController {
         
     }
 
+}
 
+extension CombatViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3 // TEMP
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CombatTableCell.identifier, for: indexPath) as! CombatTableCell
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    
+    
+    
 }

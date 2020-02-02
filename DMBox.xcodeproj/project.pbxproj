@@ -126,7 +126,6 @@
 				02DBD2CC23E0735C0070D871 /* SceneDelegate.swift */,
 				02DBD2D623E073620070D871 /* Assets.xcassets */,
 				02DBD2DB23E073620070D871 /* Info.plist */,
-				02DBD2D323E0735C0070D871 /* DMBox.xcdatamodeld */,
 			);
 			path = DMBox;
 			sourceTree = "<group>";
@@ -188,6 +187,7 @@
 		02DBD2F423E076020070D871 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				02DBD2D323E0735C0070D871 /* DMBox.xcdatamodeld */,
 				02DBD30323E084830070D871 /* CharacterClass.swift */,
 				02DBD2FF23E0829E0070D871 /* PlayerCharacter.swift */,
 				02415CA923E1BD83004A9196 /* Spell.swift */,
