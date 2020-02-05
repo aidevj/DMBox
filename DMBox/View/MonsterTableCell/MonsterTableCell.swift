@@ -17,8 +17,8 @@ class MonsterTableCell: UITableViewCell {
     var monster: Monster! {
         didSet {
             nameLabel.text = monster.name
-            descripLabel.text = "\(monster.type) | \(monster.size) | \(monster.alignment)"
-            crNumLabel.text = monster.challengeRating
+            //descripLabel.text = "\(monster.type) | \(monster.size) | \(monster.alignment)"
+//            crNumLabel.text = monster.challengeRating
         }
     }
     

@@ -32,16 +32,19 @@ class MonsterSearchViewController: UIViewController {
         viewModel.delegate = self
         
         // TEST----------
-        //viewModel.getMonsters("Fire")
+        viewModel.getMonsters("Fire")
 
     }
     
     // TEST---------------------------
     private func setupDummyData() {
         monsters = [
-            Monster("Croc Monster", "Gargantuan", "Meme", "meme2", "Chaotic Evil", 1, "Natural Armor", 500, "13"),
-            Monster("Fao", "Medium", "Meme", "memey", "Chaotic Neutral", 1, "Woof", 500, "1/4"),
-            Monster("Croc Monster", "Gargantuan", "Meme", "meme2", "Chaotic Evil", 1, "Natural Armor", 500, "1/2")
+//            Monster("Croc Monster", "Gargantuan", "Meme", "meme2", "Chaotic Evil", 1, "Natural Armor", 500, "13"),
+//            Monster("Fao", "Medium", "Meme", "memey", "Chaotic Neutral", 1, "Woof", 500, "1/4"),
+//            Monster("Croc Monster", "Gargantuan", "Meme", "meme2", "Chaotic Evil", 1, "Natural Armor", 500, "1/2")
+            Monster("Croc Monster"),
+            Monster("Fao"),
+            Monster("Fao Monster")
         ]
     }
     //--------------------------------
@@ -50,14 +53,14 @@ class MonsterSearchViewController: UIViewController {
 
 extension MonsterSearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return monsters.count // TEST
-        //return viewModel.monsters.count
+        //return monsters.count // TEST
+        return viewModel.monsters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MonsterTableCell.identifier, for: indexPath) as! MonsterTableCell
         
-        cell.monster = monsters[indexPath.row]
+        cell.monster = viewModel.monsters[indexPath.row]
         
         return cell
     }

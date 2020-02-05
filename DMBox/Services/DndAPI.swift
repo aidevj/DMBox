@@ -18,16 +18,14 @@ struct DndAPI {
     // General search
         //https://api.open5e.com/search/?text=fire
     
-    let base = "https://api.open5e.com/"
+    let base = "https://api.open5e.com"
     
     let search = "/?search="
     
     var searchTerm: String!
-    var id: String!
     
-    init(_ searchTerm: String? = nil, _ id: String? = nil) {
+    init(_ searchTerm: String? = nil) {
         self.searchTerm = searchTerm
-        self.id = id
     }
     
     // MARK: Search Category URL Requests
@@ -35,6 +33,7 @@ struct DndAPI {
     // For use when searching through monsters
     var monsterURL: URL? {
         guard let query = searchTerm else { return nil }
+        print("Search URL:" + base + "/monsters" + search + query)
         return URL(string: base + "/monsters" + search + query)
     }
     
