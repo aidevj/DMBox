@@ -145,13 +145,6 @@ class Monster: Decodable {
             let _flySpeed = speedDict["fly"] as? Int64,
             let _swimSpeed = speedDict["swim"] as? Int64,
             let _climbSpeed = speedDict["climb"] as? Int64 else { return nil }
-            
-            
-            // TODO: test
-            //let speedDict = dict["speed"] as? [String?:Any],
-            //let _walkSpeed = speedDict["walk"] as? Int,
-            //let _flySpeed = speedDict["fly"] as? Int,
-            //let _swimSpeed = speedDict["walk"] as? Int else { return nil }
         
         self.name = _name
         self.size = _size.capitalizingFirstLetter()
@@ -178,12 +171,35 @@ class Monster: Decodable {
         self.flySpeed = _flySpeed
         self.swimSpeed = _swimSpeed
         self.climbSpeed = _climbSpeed
-        
-        /*
-        self.walkSpeed = _walkSpeed
-        self.flySpeed = _flySpeed
-        self.swimSpeed = _swimSpeed
-         */
+    }
+    
+    //MARK: Core Data
+    init(_ core: CoreMonster) {
+        self.name = core.name!
+        self.size = core.size!
+        self.type = core.type!
+        self.subtype = core.subtype!
+        self.alignment = core.alignment!
+        self.armorClass = core.armorClass
+        self.armorDescription = core.armorDescription!
+        self.hitpoints = core.hitpoints
+        self.challengeRating = core.challengeRating!
+        self.strScore = core.strScore
+        self.dexScore = core.dexScore
+        self.conScore = core.conScore
+        self.intScore = core.intScore
+        self.wisScore = core.wisScore
+        self.chaScore = core.chaScore
+        self.strSave = Int64(core.strSave!)
+        self.dexSave = core.dexSave
+        self.conSave = core.conSave
+        self.intSave = core.intSave
+        self.wisSave = core.wisSave
+        self.chaSave = core.chaSave
+        self.walkSpeed = core.walkSpeed
+        self.flySpeed = core.flySpeed
+        self.swimSpeed = core.swimSpeed
+        self.climbSpeed = core.climbSpeed
     }
     
 }

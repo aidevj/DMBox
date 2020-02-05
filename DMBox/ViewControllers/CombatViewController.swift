@@ -39,8 +39,8 @@ class CombatViewController: UIViewController {
         viewModel.dummyCombatList = [
             Combat(title: "Sample Encounter #1", description: "Lorem ipsum",
                    players: [
-                    PlayerCharacter(name: "Faolan Valralei", classes: [CharacterClass(className: "Rogue", level: 10, subclass: "Swashbuckler")], imagePath: nil, maxHP: 57, currentHP: 57),
-                    PlayerCharacter(name: "Nyl", classes: [CharacterClass(className: "Sorcerer", level: 6, subclass: "Clockwork Soul"), CharacterClass(className: "Ranger", level: 4, subclass: "Gloom Stalker")], imagePath: nil, maxHP: 70, currentHP: 70)
+                    PlayerCharacter(name: "John Cena", classes: [CharacterClass(className: "Bard", level: 10, subclass: "College of Glamor")], imagePath: nil, playerName: "Aiden", maxHP: 57, currentHP: 57),
+                    PlayerCharacter(name: "Annie May", classes: [CharacterClass(className: "Warlock", level: 6, subclass: "Raven Queen"), CharacterClass(className: "Sorcerer", level: 4, subclass: "Clockwork Soul")], imagePath: nil, playerName: "Ima Weeb", maxHP: 70, currentHP: 70)
                 ],
                    allies: [],
                    enemies: [

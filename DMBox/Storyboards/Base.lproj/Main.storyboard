@@ -30,14 +30,23 @@
                                 <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d20-clipart-12" translatesAutoresizingMaskIntoConstraints="NO" id="INd-ec-mBj">
+                                <rect key="frame" x="122" y="185" width="131" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="INd-ec-mBj" secondAttribute="height" multiplier="131:128" id="TEA-rG-zSN"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="INd-ec-mBj" secondAttribute="trailing" constant="122" id="0Rf-4z-TJI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cgp-2u-kuT" secondAttribute="trailing" constant="96" id="7Os-i1-Eq3"/>
                             <constraint firstItem="cgp-2u-kuT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="142" id="FQe-qs-64g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wUL-Rc-3el" secondAttribute="trailing" constant="97" id="eQ5-Ye-b9o"/>
                             <constraint firstItem="cgp-2u-kuT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="mmv-T5-t12"/>
+                            <constraint firstItem="INd-ec-mBj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="tso-JH-rsx"/>
                             <constraint firstItem="wUL-Rc-3el" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="vTP-Of-OiM"/>
+                            <constraint firstItem="INd-ec-mBj" firstAttribute="top" secondItem="cgp-2u-kuT" secondAttribute="bottom" constant="22" id="wH0-2r-iZu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wUL-Rc-3el" secondAttribute="bottom" constant="306" id="ziU-Xr-C7d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -235,4 +244,7 @@
             <point key="canvasLocation" x="949.60000000000002" y="97.601199400299862"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="d20-clipart-12" width="400" height="400"/>
+    </resources>
 </document>

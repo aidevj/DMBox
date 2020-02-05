@@ -28,7 +28,7 @@ class PlayerViewCell: UITableViewCell {
             }
             classLabel.text = classString
             
-            //playerNameLabel.text = player.
+            playerNameLabel.text = "Player: " + player.playerName
         }
     }
 
@@ -38,8 +38,6 @@ class PlayerViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

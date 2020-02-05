@@ -22,6 +22,7 @@
 		02415CC323EAC016004A9196 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CC223EAC016004A9196 /* String+extension.swift */; };
 		02415CC523EAE314004A9196 /* CombatDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CC423EAE314004A9196 /* CombatDetailsViewController.swift */; };
 		02415CC723EAFC45004A9196 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CC623EAFC45004A9196 /* ViewController+Extension.swift */; };
+		02415CC923EB150E004A9196 /* CoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CC823EB150E004A9196 /* CoreManager.swift */; };
 		02DBD2CB23E0735C0070D871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CA23E0735C0070D871 /* AppDelegate.swift */; };
 		02DBD2CD23E0735C0070D871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CC23E0735C0070D871 /* SceneDelegate.swift */; };
 		02DBD2CF23E0735C0070D871 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CE23E0735C0070D871 /* HomeViewController.swift */; };
@@ -66,6 +67,7 @@
 		02415CC223EAC016004A9196 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		02415CC423EAE314004A9196 /* CombatDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatDetailsViewController.swift; sourceTree = "<group>"; };
 		02415CC623EAFC45004A9196 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		02415CC823EB150E004A9196 /* CoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreManager.swift; sourceTree = "<group>"; };
 		02DBD2C723E0735C0070D871 /* DMBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DBD2CA23E0735C0070D871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DBD2CC23E0735C0070D871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +147,6 @@
 				02DBD2F123E075DA0070D871 /* Extensions */,
 				02DBD2CA23E0735C0070D871 /* AppDelegate.swift */,
 				02DBD2CC23E0735C0070D871 /* SceneDelegate.swift */,
-				02DBD2D623E073620070D871 /* Assets.xcassets */,
 				02DBD2DB23E073620070D871 /* Info.plist */,
 			);
 			path = DMBox;
@@ -165,6 +166,7 @@
 			children = (
 				02415CB123E1D8C3004A9196 /* DndAPI.swift */,
 				02415CB323E1DE9B004A9196 /* APIService.swift */,
+				02415CC823EB150E004A9196 /* CoreManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,6 +200,7 @@
 		02DBD2F323E075FE0070D871 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				02DBD2D623E073620070D871 /* Assets.xcassets */,
 				02DBD2FE23E07CF10070D871 /* PlayersTableView */,
 				02415CBF23E8E1C5004A9196 /* MonsterTableCell */,
 				02DBD30523E087650070D871 /* CampaignElementViewCell.swift */,
@@ -348,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02415CC923EB150E004A9196 /* CoreManager.swift in Sources */,
 				02415CB423E1DE9B004A9196 /* APIService.swift in Sources */,
 				02DBD30423E084830070D871 /* CharacterClass.swift in Sources */,
 				02415CB723E25D34004A9196 /* CombatTableCell.swift in Sources */,

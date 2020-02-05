@@ -16,5 +16,9 @@ struct Combat {
     let allies: [PlayerCharacter]
     let enemies: [Monster]
     
-    // init needed when init coredata
+//    init(_ core: CoreCombat) {
+//        self.title = core.title!
+//        self.description = core.descrip!
+//        self.players = core.players!
+//    }
 }

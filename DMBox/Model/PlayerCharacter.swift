@@ -12,6 +12,7 @@ struct PlayerCharacter {
     var name: String
     var classes: [CharacterClass]
     var imagePath: String?
+    var playerName: String
     
     var maxHP: Int
     var currentHP: Int

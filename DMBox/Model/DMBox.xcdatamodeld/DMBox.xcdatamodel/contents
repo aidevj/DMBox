@@ -2,19 +2,50 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CoreCombat" representedClassName="CoreCombat" syncable="YES" codeGenerationType="class">
         <attribute name="allies" optional="YES" attributeType="Transformable"/>
+        <attribute name="descrip" optional="YES" attributeType="String"/>
         <attribute name="enemies" optional="YES" attributeType="Transformable"/>
         <attribute name="players" optional="YES" attributeType="Transformable"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="monsters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreMonster" inverseName="combat" inverseEntity="CoreMonster"/>
     </entity>
-    <entity name="NPC" representedClassName="NPC" syncable="YES" codeGenerationType="class">
+    <entity name="CoreMonster" representedClassName="CoreMonster" syncable="YES" codeGenerationType="class">
+        <attribute name="alignment" optional="YES" attributeType="String"/>
+        <attribute name="armorClass" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="armorDescription" optional="YES" attributeType="String"/>
+        <attribute name="challengeRating" optional="YES" attributeType="String"/>
+        <attribute name="chaSave" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="chaScore" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="climbSpeed" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="conSave" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="conScore" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dexSave" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dexScore" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="flySpeed" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="hitpoints" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="intSave" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="intScore" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="String"/>
+        <attribute name="strSave" optional="YES" attributeType="String"/>
+        <attribute name="strScore" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="subtype" optional="YES" attributeType="String"/>
+        <attribute name="swimSpeed" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="walkSpeed" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wisSave" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wisScore" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="combat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreCombat" inverseName="monsters" inverseEntity="CoreCombat"/>
+    </entity>
+    <entity name="CoreNPC" representedClassName="CoreNPC" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Player" representedClassName="Player" syncable="YES" codeGenerationType="class">
+    <entity name="CorePlayer" representedClassName="CorePlayer" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="CoreCombat" positionX="-54" positionY="0" width="128" height="103"/>
-        <element name="NPC" positionX="-54" positionY="0" width="128" height="58"/>
-        <element name="Player" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="CoreCombat" positionX="-54" positionY="0" width="128" height="133"/>
+        <element name="CoreMonster" positionX="-45" positionY="36" width="128" height="433"/>
+        <element name="CoreNPC" positionX="-54" positionY="0" width="128" height="58"/>
+        <element name="CorePlayer" positionX="-63" positionY="-18" width="128" height="58"/>
     </elements>
 </model>
