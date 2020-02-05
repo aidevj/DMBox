@@ -15,12 +15,12 @@ class MonsterSearchViewController: UIViewController {
     // to be passed from last VC
     var viewModel: ViewModel!
     
-    var monsters: [Monster] = []
+   // var monsters: [Monster] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        setupDummyData()
+        //setupDummyData()
     }
     
     // MARK: Setup Functions
@@ -37,16 +37,14 @@ class MonsterSearchViewController: UIViewController {
     }
     
     // TEST---------------------------
+    /*
     private func setupDummyData() {
         monsters = [
-//            Monster("Croc Monster", "Gargantuan", "Meme", "meme2", "Chaotic Evil", 1, "Natural Armor", 500, "13"),
-//            Monster("Fao", "Medium", "Meme", "memey", "Chaotic Neutral", 1, "Woof", 500, "1/4"),
-//            Monster("Croc Monster", "Gargantuan", "Meme", "meme2", "Chaotic Evil", 1, "Natural Armor", 500, "1/2")
-            Monster("Croc Monster"),
-            Monster("Fao"),
-            Monster("Fao Monster")
+            Monster("Croc Monster", "Gargantuan", "Meme", "meme2", "Chaotic Evil", 1, "Natural Armor", 500, "13"),
+            Monster("Fao", "Medium", "Meme", "memey", "Chaotic Neutral", 1, "Woof", 500, "1/4"),
+            Monster("Croc Monster", "Gargantuan", "Meme", "meme2", "Chaotic Evil", 1, "Natural Armor", 500, "1/2")
         ]
-    }
+    }*/
     //--------------------------------
     
 }

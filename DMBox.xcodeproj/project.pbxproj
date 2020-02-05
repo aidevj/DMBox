@@ -19,6 +19,7 @@
 		02415CBD23E8E1C0004A9196 /* MonsterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CBB23E8E1C0004A9196 /* MonsterTableCell.swift */; };
 		02415CBE23E8E1C0004A9196 /* MonsterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02415CBC23E8E1C0004A9196 /* MonsterTableCell.xib */; };
 		02415CC123EA5EF9004A9196 /* Combat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CC023EA5EF9004A9196 /* Combat.swift */; };
+		02415CC323EAC016004A9196 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CC223EAC016004A9196 /* String+extension.swift */; };
 		02DBD2CB23E0735C0070D871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CA23E0735C0070D871 /* AppDelegate.swift */; };
 		02DBD2CD23E0735C0070D871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CC23E0735C0070D871 /* SceneDelegate.swift */; };
 		02DBD2CF23E0735C0070D871 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CE23E0735C0070D871 /* HomeViewController.swift */; };
@@ -60,6 +61,7 @@
 		02415CBB23E8E1C0004A9196 /* MonsterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterTableCell.swift; sourceTree = "<group>"; };
 		02415CBC23E8E1C0004A9196 /* MonsterTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonsterTableCell.xib; sourceTree = "<group>"; };
 		02415CC023EA5EF9004A9196 /* Combat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combat.swift; sourceTree = "<group>"; };
+		02415CC223EAC016004A9196 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		02DBD2C723E0735C0070D871 /* DMBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DBD2CA23E0735C0070D871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DBD2CC23E0735C0070D871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		02DBD2F123E075DA0070D871 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				02415CC223EAC016004A9196 /* String+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				02415CB723E25D34004A9196 /* CombatTableCell.swift in Sources */,
 				02DBD2F723E07BC70070D871 /* CampaignViewController.swift in Sources */,
 				02415CAE23E1BF9A004A9196 /* CombatViewController.swift in Sources */,
+				02415CC323EAC016004A9196 /* String+extension.swift in Sources */,
 				02DBD30723E087650070D871 /* CampaignElementViewCell.swift in Sources */,
 				02415CBA23E78D26004A9196 /* MonsterSearchViewController.swift in Sources */,
 				02DBD2D523E0735C0070D871 /* DMBox.xcdatamodeld in Sources */,

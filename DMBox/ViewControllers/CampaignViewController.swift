@@ -37,13 +37,12 @@ class CampaignViewController: UIViewController {
         campaignTableView.separatorStyle = .none
         campaignTableView.backgroundColor = .none
         
-        //TODO: view model delgate to self
         viewModel.delegate = self
     }
     
     //TESTING PURPOSES---------------
     private func setupDummyData() {
-        data = ["Player Characters", "Combat & Encounters"]
+        data = ["Player Characters (unavailable)", "Combat & Encounters"]
         // "id":Int and "view name":String
         // i.e. 0. PlayersViewController
         //      1. CombatViewController
@@ -55,7 +54,7 @@ class CampaignViewController: UIViewController {
 extension CampaignViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count   // TEMP
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
