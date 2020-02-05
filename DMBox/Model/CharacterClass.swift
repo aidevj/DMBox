@@ -9,7 +9,7 @@
 import Foundation
 
 // Represents a DND class, associated level, and subclass if available
-public struct CharacterClass {
+struct CharacterClass {
     var className: String
     var level: Int
     var subclass: String?

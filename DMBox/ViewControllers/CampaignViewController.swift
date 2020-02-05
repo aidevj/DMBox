@@ -12,6 +12,9 @@ class CampaignViewController: UIViewController {
 
     @IBOutlet weak var campaignTableView: UITableView!
     
+    // Entry point for ViewModel
+    var viewModel = ViewModel()
+    
     var data: [String] = []
     
     override func viewDidLoad() {
@@ -35,6 +38,7 @@ class CampaignViewController: UIViewController {
         campaignTableView.backgroundColor = .none
         
         //TODO: view model delgate to self
+        viewModel.delegate = self
     }
     
     //TESTING PURPOSES---------------
@@ -76,16 +80,24 @@ extension CampaignViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             break
         case 1:
-            print("Combat selected")
             let nextVC = storyboard?.instantiateViewController(withIdentifier: "CombatViewController") as! CombatViewController
             //nextVC.viewModel = viewModel
             nextVC.hidesBottomBarWhenPushed = true
             navigationController?.view.backgroundColor = .none
             navigationController?.pushViewController(nextVC, animated: true)
+            nextVC.viewModel = viewModel
         default:
             break
         }
         
+        
+    }
+    
+    
+}
+
+extension CampaignViewController: ViewModelDelegate {
+    func update() {
         
     }
     

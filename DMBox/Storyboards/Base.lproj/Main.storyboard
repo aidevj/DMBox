@@ -116,6 +116,40 @@
             </objects>
             <point key="canvasLocation" x="2775" y="478"/>
         </scene>
+        <!--Monster Search View Controller-->
+        <scene sceneID="C0d-RZ-eQP">
+            <objects>
+                <viewController storyboardIdentifier="MonsterSearchViewController" id="fSy-sC-Llg" customClass="MonsterSearchViewController" customModule="DMBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uTq-la-hby">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-zd-mez">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fSy-sC-Llg" id="P0G-Qh-c1A"/>
+                                    <outlet property="delegate" destination="fSy-sC-Llg" id="zSp-NR-bC5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5VP-sY-Hq9" firstAttribute="trailing" secondItem="ahJ-zd-mez" secondAttribute="trailing" id="3f1-Tf-mSk"/>
+                            <constraint firstItem="ahJ-zd-mez" firstAttribute="leading" secondItem="5VP-sY-Hq9" secondAttribute="leading" id="998-Hn-pnt"/>
+                            <constraint firstItem="5VP-sY-Hq9" firstAttribute="bottom" secondItem="ahJ-zd-mez" secondAttribute="bottom" id="SQP-mA-AC2"/>
+                            <constraint firstItem="ahJ-zd-mez" firstAttribute="top" secondItem="5VP-sY-Hq9" secondAttribute="top" id="jYM-Rt-vWE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5VP-sY-Hq9"/>
+                    </view>
+                    <connections>
+                        <outlet property="monsterTableView" destination="ahJ-zd-mez" id="vVw-zS-nGf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBJ-q9-b2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3841" y="477"/>
+        </scene>
         <!--Players View Controller-->
         <scene sceneID="WgT-Z1-G11">
             <objects>

@@ -7,12 +7,14 @@
 //
 
 import Foundation
-//
-//struct Combat {
-//    let title: String
-//    let description: String
-//    
-//    let players: [PlayerCharacter]
-//    let allies: [PlayerCharacter]
-//    let enemies: [Monster]
-//}
+
+struct Combat {
+    let title: String
+    let description: String
+    
+    let players: [PlayerCharacter]
+    let allies: [PlayerCharacter]
+    let enemies: [Monster]
+    
+    // init needed when init coredata
+}

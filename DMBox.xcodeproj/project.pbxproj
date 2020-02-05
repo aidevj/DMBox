@@ -11,11 +11,14 @@
 		02415CAA23E1BD83004A9196 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CA923E1BD83004A9196 /* Spell.swift */; };
 		02415CAC23E1BE9D004A9196 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CAB23E1BE9D004A9196 /* Monster.swift */; };
 		02415CAE23E1BF9A004A9196 /* CombatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CAD23E1BF9A004A9196 /* CombatViewController.swift */; };
-		02415CB023E1C02E004A9196 /* Combat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CAF23E1C02E004A9196 /* Combat.swift */; };
 		02415CB223E1D8C3004A9196 /* DndAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CB123E1D8C3004A9196 /* DndAPI.swift */; };
 		02415CB423E1DE9B004A9196 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CB323E1DE9B004A9196 /* APIService.swift */; };
 		02415CB723E25D34004A9196 /* CombatTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CB523E25D34004A9196 /* CombatTableCell.swift */; };
 		02415CB823E25D34004A9196 /* CombatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02415CB623E25D34004A9196 /* CombatTableCell.xib */; };
+		02415CBA23E78D26004A9196 /* MonsterSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CB923E78D26004A9196 /* MonsterSearchViewController.swift */; };
+		02415CBD23E8E1C0004A9196 /* MonsterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CBB23E8E1C0004A9196 /* MonsterTableCell.swift */; };
+		02415CBE23E8E1C0004A9196 /* MonsterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02415CBC23E8E1C0004A9196 /* MonsterTableCell.xib */; };
+		02415CC123EA5EF9004A9196 /* Combat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CC023EA5EF9004A9196 /* Combat.swift */; };
 		02DBD2CB23E0735C0070D871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CA23E0735C0070D871 /* AppDelegate.swift */; };
 		02DBD2CD23E0735C0070D871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CC23E0735C0070D871 /* SceneDelegate.swift */; };
 		02DBD2CF23E0735C0070D871 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CE23E0735C0070D871 /* HomeViewController.swift */; };
@@ -49,11 +52,14 @@
 		02415CA923E1BD83004A9196 /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
 		02415CAB23E1BE9D004A9196 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		02415CAD23E1BF9A004A9196 /* CombatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatViewController.swift; sourceTree = "<group>"; };
-		02415CAF23E1C02E004A9196 /* Combat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combat.swift; sourceTree = "<group>"; };
 		02415CB123E1D8C3004A9196 /* DndAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DndAPI.swift; sourceTree = "<group>"; };
 		02415CB323E1DE9B004A9196 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		02415CB523E25D34004A9196 /* CombatTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatTableCell.swift; sourceTree = "<group>"; };
 		02415CB623E25D34004A9196 /* CombatTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CombatTableCell.xib; sourceTree = "<group>"; };
+		02415CB923E78D26004A9196 /* MonsterSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterSearchViewController.swift; sourceTree = "<group>"; };
+		02415CBB23E8E1C0004A9196 /* MonsterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterTableCell.swift; sourceTree = "<group>"; };
+		02415CBC23E8E1C0004A9196 /* MonsterTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonsterTableCell.xib; sourceTree = "<group>"; };
+		02415CC023EA5EF9004A9196 /* Combat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combat.swift; sourceTree = "<group>"; };
 		02DBD2C723E0735C0070D871 /* DMBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DBD2CA23E0735C0070D871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DBD2CC23E0735C0070D871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02415CBF23E8E1C5004A9196 /* MonsterTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				02415CBB23E8E1C0004A9196 /* MonsterTableCell.swift */,
+				02415CBC23E8E1C0004A9196 /* MonsterTableCell.xib */,
+			);
+			path = MonsterTableCell;
+			sourceTree = "<group>";
+		};
 		02DBD2BE23E0735C0070D871 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				02DBD2FE23E07CF10070D871 /* PlayersTableView */,
+				02415CBF23E8E1C5004A9196 /* MonsterTableCell */,
 				02DBD30523E087650070D871 /* CampaignElementViewCell.swift */,
 				02DBD30623E087650070D871 /* CampaignElementViewCell.xib */,
 				02415CB523E25D34004A9196 /* CombatTableCell.swift */,
@@ -192,7 +208,7 @@
 				02DBD2FF23E0829E0070D871 /* PlayerCharacter.swift */,
 				02415CA923E1BD83004A9196 /* Spell.swift */,
 				02415CAB23E1BE9D004A9196 /* Monster.swift */,
-				02415CAF23E1C02E004A9196 /* Combat.swift */,
+				02415CC023EA5EF9004A9196 /* Combat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,8 +218,9 @@
 			children = (
 				02DBD2CE23E0735C0070D871 /* HomeViewController.swift */,
 				02DBD2F623E07BC70070D871 /* CampaignViewController.swift */,
-				02DBD2F823E07C740070D871 /* PlayersViewController.swift */,
 				02415CAD23E1BF9A004A9196 /* CombatViewController.swift */,
+				02DBD2F823E07C740070D871 /* PlayersViewController.swift */,
+				02415CB923E78D26004A9196 /* MonsterSearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -300,6 +317,7 @@
 			files = (
 				02DBD2DA23E073620070D871 /* LaunchScreen.storyboard in Resources */,
 				02DBD2D723E073620070D871 /* Assets.xcassets in Resources */,
+				02415CBE23E8E1C0004A9196 /* MonsterTableCell.xib in Resources */,
 				02415CB823E25D34004A9196 /* CombatTableCell.xib in Resources */,
 				02DBD2D223E0735C0070D871 /* Main.storyboard in Resources */,
 				02DBD30823E087650070D871 /* CampaignElementViewCell.xib in Resources */,
@@ -327,17 +345,19 @@
 				02DBD2F723E07BC70070D871 /* CampaignViewController.swift in Sources */,
 				02415CAE23E1BF9A004A9196 /* CombatViewController.swift in Sources */,
 				02DBD30723E087650070D871 /* CampaignElementViewCell.swift in Sources */,
+				02415CBA23E78D26004A9196 /* MonsterSearchViewController.swift in Sources */,
 				02DBD2D523E0735C0070D871 /* DMBox.xcdatamodeld in Sources */,
 				02DBD30023E0829E0070D871 /* PlayerCharacter.swift in Sources */,
 				02DBD2CF23E0735C0070D871 /* HomeViewController.swift in Sources */,
 				02415CB223E1D8C3004A9196 /* DndAPI.swift in Sources */,
 				02415CAC23E1BE9D004A9196 /* Monster.swift in Sources */,
 				02DBD2CB23E0735C0070D871 /* AppDelegate.swift in Sources */,
+				02415CC123EA5EF9004A9196 /* Combat.swift in Sources */,
 				02DBD2CD23E0735C0070D871 /* SceneDelegate.swift in Sources */,
 				02DBD2F923E07C740070D871 /* PlayersViewController.swift in Sources */,
 				02415CA823E1BA71004A9196 /* ViewModel.swift in Sources */,
 				02415CAA23E1BD83004A9196 /* Spell.swift in Sources */,
-				02415CB023E1C02E004A9196 /* Combat.swift in Sources */,
+				02415CBD23E8E1C0004A9196 /* MonsterTableCell.swift in Sources */,
 				02DBD2FC23E07CE90070D871 /* PlayerViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

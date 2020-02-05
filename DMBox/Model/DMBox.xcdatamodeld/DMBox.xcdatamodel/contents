@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Combat" representedClassName="Combat" syncable="YES" codeGenerationType="class">
+    <entity name="CoreCombat" representedClassName="CoreCombat" syncable="YES" codeGenerationType="class">
         <attribute name="allies" optional="YES" attributeType="Transformable"/>
         <attribute name="enemies" optional="YES" attributeType="Transformable"/>
         <attribute name="players" optional="YES" attributeType="Transformable"/>
@@ -13,8 +13,8 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
+        <element name="CoreCombat" positionX="-54" positionY="0" width="128" height="103"/>
         <element name="NPC" positionX="-54" positionY="0" width="128" height="58"/>
         <element name="Player" positionX="-63" positionY="-18" width="128" height="58"/>
-        <element name="Combat" positionX="-54" positionY="0" width="128" height="103"/>
     </elements>
 </model>

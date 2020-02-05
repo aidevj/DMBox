@@ -35,6 +35,28 @@ class Monster: Decodable {
         case challengeRating = "challenge_rating"
     }
     
+    init(_ name: String? = nil,
+        _ size: String? = nil,
+        _ type: String? = nil,
+        _ subtype: String? = nil,
+        _ alignment: String? = nil,
+        _ armorClass: Double? = nil,
+        _ armorDescription: String? = nil,
+        _ hitpoints: Int? = nil,
+        _ challengeRating: String? = nil
+    ) {
+        self.name = name!
+        self.size = size!
+        self.type = type!
+        self.subtype = subtype!
+        self.alignment = alignment!
+        self.armorClass = armorClass!
+        self.armorDescription = armorDescription!
+        self.hitpoints = hitpoints!
+        self.challengeRating = challengeRating!
+    }
+    
+    
     init?(_ dict: [String:Any]) {
         guard let _name = dict["name"] as? String,
             let _size = dict["size"] as? String,

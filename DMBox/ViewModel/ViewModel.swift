@@ -21,6 +21,12 @@ class ViewModel {
         }
     }
     
+    var monsters = [Monster]() {
+        didSet {
+            delegate?.update()
+        }
+    }
+    
     var currentPlayerCharacter: PlayerCharacter! {
         didSet {
             
@@ -30,5 +36,15 @@ class ViewModel {
 }
 
 extension ViewModel {
-    
+    func getMonsters(_ monsterName: String) {
+        API.getMonstersFromApi(for: monsterName) { [weak self] apiResult in
+            switch apiResult {
+            case .success(let monsters):
+                self?.monsters = monsters
+                print("Monsters Count: \(monsters.count)")
+            case .failure(let error):
+                print("API Failure: \(error.localizedDescription)") // DEBUG
+            }
+        }
+    }
 }
