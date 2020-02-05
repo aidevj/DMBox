@@ -33,6 +33,13 @@ class ViewModel {
         }
     }
     
+    //MARK: TESTING DATA
+    var dummyCombatList = [Combat]() {
+        didSet {
+            delegate?.update()
+        }
+    }
+    
 }
 
 extension ViewModel {

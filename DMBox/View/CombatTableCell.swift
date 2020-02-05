@@ -15,4 +15,13 @@ class CombatTableCell: UITableViewCell {
     
     static let identifier = "CombatTableCell"
     
+    var combat: Combat! {
+        didSet {
+            titleLabel.text = combat.title
+            
+            //TODO
+            
+        }
+    }
+    
 }

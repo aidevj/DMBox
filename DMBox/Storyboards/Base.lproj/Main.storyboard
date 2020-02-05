@@ -24,8 +24,8 @@
                                     <segue destination="tBX-gJ-H6c" kind="show" id="d1Z-Q9-sOa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Master Box" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgp-2u-kuT">
-                                <rect key="frame" x="108" y="142" width="159" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dungeon Master Box" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgp-2u-kuT">
+                                <rect key="frame" x="96" y="142" width="183" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -33,10 +33,10 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cgp-2u-kuT" secondAttribute="trailing" constant="108" id="7Os-i1-Eq3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cgp-2u-kuT" secondAttribute="trailing" constant="96" id="7Os-i1-Eq3"/>
                             <constraint firstItem="cgp-2u-kuT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="142" id="FQe-qs-64g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wUL-Rc-3el" secondAttribute="trailing" constant="97" id="eQ5-Ye-b9o"/>
-                            <constraint firstItem="cgp-2u-kuT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="mmv-T5-t12"/>
+                            <constraint firstItem="cgp-2u-kuT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="mmv-T5-t12"/>
                             <constraint firstItem="wUL-Rc-3el" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="vTP-Of-OiM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wUL-Rc-3el" secondAttribute="bottom" constant="306" id="ziU-Xr-C7d"/>
                         </constraints>
@@ -116,6 +116,40 @@
             </objects>
             <point key="canvasLocation" x="2775" y="478"/>
         </scene>
+        <!--Combat Details View Controller-->
+        <scene sceneID="GbC-2A-uYi">
+            <objects>
+                <viewController storyboardIdentifier="CombatDetailsViewController" id="7kH-YJ-XeJ" customClass="CombatDetailsViewController" customModule="DMBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pmA-DI-r9q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d9C-3j-2Uz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7kH-YJ-XeJ" id="uTT-f7-Lx9"/>
+                                    <outlet property="delegate" destination="7kH-YJ-XeJ" id="tUl-WV-2G6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KA8-D5-TZx" firstAttribute="bottom" secondItem="d9C-3j-2Uz" secondAttribute="bottom" id="ENO-5C-jDd"/>
+                            <constraint firstItem="d9C-3j-2Uz" firstAttribute="top" secondItem="KA8-D5-TZx" secondAttribute="top" id="Fnl-CP-bsb"/>
+                            <constraint firstItem="KA8-D5-TZx" firstAttribute="trailing" secondItem="d9C-3j-2Uz" secondAttribute="trailing" id="Jo9-9Y-oJ4"/>
+                            <constraint firstItem="d9C-3j-2Uz" firstAttribute="leading" secondItem="KA8-D5-TZx" secondAttribute="leading" id="opo-UE-nzG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KA8-D5-TZx"/>
+                    </view>
+                    <connections>
+                        <outlet property="combatDetailsTableView" destination="d9C-3j-2Uz" id="PIX-re-KQS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSw-eu-gsu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3588" y="477"/>
+        </scene>
         <!--Monster Search View Controller-->
         <scene sceneID="C0d-RZ-eQP">
             <objects>
@@ -133,7 +167,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5VP-sY-Hq9" firstAttribute="trailing" secondItem="ahJ-zd-mez" secondAttribute="trailing" id="3f1-Tf-mSk"/>
                             <constraint firstItem="ahJ-zd-mez" firstAttribute="leading" secondItem="5VP-sY-Hq9" secondAttribute="leading" id="998-Hn-pnt"/>
@@ -148,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBJ-q9-b2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3841" y="477"/>
+            <point key="canvasLocation" x="4426" y="477"/>
         </scene>
         <!--Players View Controller-->
         <scene sceneID="WgT-Z1-G11">

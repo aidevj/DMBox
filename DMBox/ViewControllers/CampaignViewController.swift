@@ -37,7 +37,7 @@ class CampaignViewController: UIViewController {
         campaignTableView.separatorStyle = .none
         campaignTableView.backgroundColor = .none
         
-        viewModel.delegate = self
+        viewModel.delegate = self  // does this need to be done for every subsequent VC?
     }
     
     //TESTING PURPOSES---------------

@@ -17,6 +17,20 @@ class PlayerViewCell: UITableViewCell {
     @IBOutlet weak var playerNameLabel: UILabel!
     
     static let identifier = "PlayerViewCell"
+    
+    var player: PlayerCharacter! {
+        didSet {
+            nameLabel.text = player.name
+            
+            var classString: String = ""
+            for playerClass in player.classes {
+                classString += "Lv \(playerClass.level) \(playerClass.className) "
+            }
+            classLabel.text = classString
+            
+            //playerNameLabel.text = player.
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
