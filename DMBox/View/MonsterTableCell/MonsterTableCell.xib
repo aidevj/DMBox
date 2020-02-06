@@ -76,6 +76,7 @@
                 <outlet property="crNumLabel" destination="eA2-op-Mpg" id="YjD-fT-C8w"/>
                 <outlet property="crTitleLabel" destination="1Rk-b3-ewQ" id="95w-rf-Qol"/>
                 <outlet property="descripLabel" destination="ZoA-RY-1bF" id="J9O-Kn-OAs"/>
+                <outlet property="mainStack" destination="DgP-MR-Usg" id="d7g-Q5-wNZ"/>
                 <outlet property="nameLabel" destination="OIs-UH-3SN" id="SG8-Cf-d3H"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="122.87946428571428"/>

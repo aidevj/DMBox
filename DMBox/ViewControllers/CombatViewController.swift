@@ -44,9 +44,9 @@ class CombatViewController: UIViewController {
                 ],
                    allies: [],
                    enemies: [
-                    Monster("Playground Bully", "Small", "Meanie", "Weakling", "Neutral Evil", 10, "", 100, "1/2", 10, 10, 10, 10, 10, 10, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0),
-                    Monster("Playground Bully 2", "Small", "Meanie", "Weakling", "Neutral Evil", 10, "", 100, "1", 10, 10, 10, 10, 10, 10, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0),
-                    Monster("Substitute Teacher", "Large", "Educational", "Temporary", "Lawful Neutral", 10, "", 100, "12", 10, 10, 10, 10, 10, 10, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0)
+                    Monster("Playground Bully", "Small", "Meanie", "Weakling", "Neutral Evil", 10, "", 100, "1", 10, 10, 10, 2, 10, 10, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0),
+                    Monster("Playground Bully 2", "Small", "Meanie", "Weakling", "Neutral Evil", 10, "", 100, "1", 10, 10, 10, 2, 10, 10, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0),
+                    Monster("Substitute Teacher", "Large", "Educational", "Temporary", "Lawful Neutral", 10, "", 100, "12", 18, 13, 10, 23, 10, 10, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0)
             ]),
             Combat(title: "Sample Encounter #2", description: "Lorem ipsum", players: [], allies: [], enemies: []),
             Combat(title: "Sample Encounter #3", description: "Lorem ipsum", players: [], allies: [], enemies: []),

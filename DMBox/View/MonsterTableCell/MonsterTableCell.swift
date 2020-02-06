@@ -14,6 +14,7 @@ class MonsterTableCell: UITableViewCell {
     @IBOutlet weak var descripLabel: UILabel!
     @IBOutlet weak var crNumLabel: UILabel!
     @IBOutlet weak var crTitleLabel: UILabel!   // not dynamic text
+    @IBOutlet weak var mainStack: UIStackView!
     
     var monster: Monster! {
         didSet {

@@ -69,6 +69,10 @@ class MonsterSearchViewController: UIViewController {
 //        }
     }
     
+    func addToCombatAction(_ sender: UIButton!) {
+        print("adding monster to combat")
+    }
+    
 }
 
 extension MonsterSearchViewController: UITableViewDataSource {
@@ -84,8 +88,10 @@ extension MonsterSearchViewController: UITableViewDataSource {
         cell.monster = monsters[indexPath.row]
         
         // add + button
-        
-        
+//        let addToCombatButton = UIButton(type: .contactAdd)
+//        cell.mainStack.addSubview(addToCombatButton)
+//        addToCombatButton.trailingAnchor.constraint(equalTo: cell.mainStack.trailingAnchor, constant: 8).isActive = true
+//
         return cell
     }
     
@@ -98,7 +104,6 @@ extension MonsterSearchViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         // To Monster Detail View
-        
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "MonsterDetailsViewController") as! MonsterDetailsViewController
         nextVC.viewModel = viewModel
         let monster = viewModel.monsters[indexPath.row]

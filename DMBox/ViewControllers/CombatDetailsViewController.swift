@@ -39,8 +39,8 @@ class CombatDetailsViewController: UIViewController {
         let combatName = viewModel.dummyCombatList[currentCombat].title
         let alert = UIAlertController(title: "Add to \(combatName)", message: "", preferredStyle: .actionSheet)
 
-        alert.addAction(UIAlertAction(title: "Existing Player Character (unavail)", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "New Player Character (unavail)", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Existing Player Character (unavail.)", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "New Player Character (unavail.)", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Existing Monster", style: .default, handler: { action in
             let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "MonsterSearchViewController") as! MonsterSearchViewController
             nextVC.hidesBottomBarWhenPushed = true
@@ -48,7 +48,7 @@ class CombatDetailsViewController: UIViewController {
             self.navigationController?.pushViewController(nextVC, animated: true)
             nextVC.viewModel = self.viewModel
         }))
-        alert.addAction(UIAlertAction(title: "New Monster (unavail)", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "New Monster (unavail.)", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
         self.present(alert, animated: true)
@@ -120,9 +120,44 @@ extension CombatDetailsViewController: UITableViewDelegate, UITableViewDataSourc
         }
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            switch indexPath.section {
+            case 0:
+                //let player = viewModel.dummyCombatList[currentCombat].players[indexPath.row]
+                //APIManager.shared.delete(player)
+                viewModel.dummyCombatList[currentCombat].players.remove(at: indexPath.row)
+            case 1:
+                viewModel.dummyCombatList[currentCombat].allies.remove(at: indexPath.row)
+            case 2:
+                viewModel.dummyCombatList[currentCombat].enemies.remove(at: indexPath.row)
+            default:
+                break
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.section {
+        case 0:
+            break
+        case 1:
+            break
+        case 2:
+            let nextVC = storyboard?.instantiateViewController(withIdentifier: "MonsterDetailsViewController") as! MonsterDetailsViewController
+            nextVC.viewModel = viewModel
+            let monster = viewModel.dummyCombatList[currentCombat].enemies[indexPath.row]
+            viewModel.currentMonster = monster
+            
+            nextVC.hidesBottomBarWhenPushed = true
+            navigationController?.view.backgroundColor = .none
+            navigationController?.pushViewController(nextVC, animated: true)
+        default:
+            break
+        }
     }
     
 }

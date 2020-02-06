@@ -14,8 +14,6 @@ class MonsterDetailsViewController: UIViewController {
     
     var viewModel: ViewModel!
     
-//    var currentMonster: Monster!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -23,7 +21,6 @@ class MonsterDetailsViewController: UIViewController {
     
     // MARK: Setup Functions
     private func setupView() {
-//        monsterDetailsTableView.register(UINib(nibName: MonsterDetailTableCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: MonsterDetailTableCell.identifier)
         monsterDetailsTableView.tableFooterView = UIView(frame: .zero)
         monsterDetailsTableView.backgroundColor = .none
         

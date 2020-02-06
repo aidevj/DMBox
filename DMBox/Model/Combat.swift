@@ -12,9 +12,9 @@ struct Combat {
     let title: String
     let description: String
     
-    let players: [PlayerCharacter]
-    let allies: [PlayerCharacter]
-    let enemies: [Monster]
+    var players: [PlayerCharacter]
+    var allies: [PlayerCharacter]
+    var enemies: [Monster]
     
 //    init(_ core: CoreCombat) {
 //        self.title = core.title!
