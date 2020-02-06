@@ -19,7 +19,22 @@ class CombatTableCell: UITableViewCell {
         didSet {
             titleLabel.text = combat.title
             
-            //TODO
+            var enemiesList = "Enemies: "
+            if (combat.enemies.count != 0) {
+                let enemies = combat.enemies
+                
+                for enemy in enemies {
+                    enemiesList += " \(enemy.name),"
+                }
+                enemiesList = String(enemiesList.dropLast())
+            }
+            else {
+                enemiesList += "(none)"
+            }
+            
+            enemiesLabel.text = enemiesList
+            
+            
             
         }
     }

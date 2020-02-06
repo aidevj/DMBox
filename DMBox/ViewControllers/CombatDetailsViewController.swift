@@ -21,6 +21,8 @@ class CombatDetailsViewController: UIViewController {
         setupView()
     }
     
+    //MARK: Set Up Funcs
+    
     private func setupView() {
         combatDetailsTableView.register(UINib(nibName: PlayerViewCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: PlayerViewCell.identifier)
         combatDetailsTableView.register(UINib(nibName: MonsterTableCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: MonsterTableCell.identifier)
@@ -33,12 +35,27 @@ class CombatDetailsViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addMonstersTapped))
     }
     
+    private func showAlert() {
+        let combatName = viewModel.dummyCombatList[currentCombat].title
+        let alert = UIAlertController(title: "Add to \(combatName)", message: "", preferredStyle: .actionSheet)
+
+        alert.addAction(UIAlertAction(title: "Existing Player Character (unavail)", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "New Player Character (unavail)", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Existing Monster", style: .default, handler: { action in
+            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "MonsterSearchViewController") as! MonsterSearchViewController
+            nextVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.view.backgroundColor = .none
+            self.navigationController?.pushViewController(nextVC, animated: true)
+            nextVC.viewModel = self.viewModel
+        }))
+        alert.addAction(UIAlertAction(title: "New Monster (unavail)", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
+    }
+    
     @objc func addMonstersTapped(sender: UIButton) {
-           let nextVC = storyboard?.instantiateViewController(withIdentifier: "MonsterSearchViewController") as! MonsterSearchViewController
-           nextVC.hidesBottomBarWhenPushed = true
-           navigationController?.view.backgroundColor = .none
-           navigationController?.pushViewController(nextVC, animated: true)
-           nextVC.viewModel = viewModel
+            showAlert()
        }
 
 }
