@@ -35,6 +35,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152.5" id="ANW-DH-YVJ"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZPv-w7-g65">
                                 <rect key="frame" x="207.5" y="0.0" width="11.5" height="47"/>

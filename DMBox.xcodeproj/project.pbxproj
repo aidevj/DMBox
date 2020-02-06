@@ -23,6 +23,7 @@
 		02415CC523EAE314004A9196 /* CombatDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CC423EAE314004A9196 /* CombatDetailsViewController.swift */; };
 		02415CC723EAFC45004A9196 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CC623EAFC45004A9196 /* ViewController+Extension.swift */; };
 		02415CC923EB150E004A9196 /* CoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02415CC823EB150E004A9196 /* CoreManager.swift */; };
+		02B7939223EBC20F00E947FB /* MonsterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B7939123EBC20F00E947FB /* MonsterDetailsViewController.swift */; };
 		02DBD2CB23E0735C0070D871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CA23E0735C0070D871 /* AppDelegate.swift */; };
 		02DBD2CD23E0735C0070D871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CC23E0735C0070D871 /* SceneDelegate.swift */; };
 		02DBD2CF23E0735C0070D871 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBD2CE23E0735C0070D871 /* HomeViewController.swift */; };
@@ -68,6 +69,7 @@
 		02415CC423EAE314004A9196 /* CombatDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatDetailsViewController.swift; sourceTree = "<group>"; };
 		02415CC623EAFC45004A9196 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		02415CC823EB150E004A9196 /* CoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreManager.swift; sourceTree = "<group>"; };
+		02B7939123EBC20F00E947FB /* MonsterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterDetailsViewController.swift; sourceTree = "<group>"; };
 		02DBD2C723E0735C0070D871 /* DMBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DBD2CA23E0735C0070D871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DBD2CC23E0735C0070D871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				02415CC423EAE314004A9196 /* CombatDetailsViewController.swift */,
 				02DBD2F823E07C740070D871 /* PlayersViewController.swift */,
 				02415CB923E78D26004A9196 /* MonsterSearchViewController.swift */,
+				02B7939123EBC20F00E947FB /* MonsterDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			files = (
 				02415CC923EB150E004A9196 /* CoreManager.swift in Sources */,
 				02415CB423E1DE9B004A9196 /* APIService.swift in Sources */,
+				02B7939223EBC20F00E947FB /* MonsterDetailsViewController.swift in Sources */,
 				02DBD30423E084830070D871 /* CharacterClass.swift in Sources */,
 				02415CB723E25D34004A9196 /* CombatTableCell.swift in Sources */,
 				02DBD2F723E07BC70070D871 /* CampaignViewController.swift in Sources */,

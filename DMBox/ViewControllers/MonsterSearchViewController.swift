@@ -15,12 +15,19 @@ class MonsterSearchViewController: UIViewController {
     // to be passed from last VC
     var viewModel: ViewModel!
     
-   // var monsters: [Monster] = []
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    //var filteredMonsters = [Monster]()
+    
+    var isFiltering: Bool {
+        return !searchController.searchBar.text!.isEmpty && searchController.isActive
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        //setupDummyData()
+        getData()
+        setupSearch()
     }
     
     // MARK: Setup Functions
@@ -30,41 +37,58 @@ class MonsterSearchViewController: UIViewController {
         monsterTableView.backgroundColor = .none
         
         viewModel.delegate = self
-        
-        // TEST----------
-        viewModel.getMonsters("Fire")
-
     }
     
-    // TEST---------------------------
-    /*
-    private func setupDummyData() {
-        monsters = [
-            Monster("Croc Monster", "Gargantuan", "Meme", "meme2", "Chaotic Evil", 1, "Natural Armor", 500, "13"),
-            Monster("Fao", "Medium", "Meme", "memey", "Chaotic Neutral", 1, "Woof", 500, "1/4"),
-            Monster("Croc Monster", "Gargantuan", "Meme", "meme2", "Chaotic Evil", 1, "Natural Armor", 500, "1/2")
-        ]
-    }*/
-    //--------------------------------
+    private func setupSearch() {
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
+    }
+    
+    private func getData() {
+        viewModel.getMonsters("") // get all monsters, API only loads first 50?
+    }
+    
+    private func filter(with search: String) {
+//        filteredMonsters = [] // clear array with every change
+//
+//        viewModel.getMonsters(search)
+        
+//        filteredMonsters = viewModel.monsters.filter({
+//            $0.name.uppercased().contains(search.uppercased())
+//        })
+        
+        
+//        monsterTableView.reloadData()
+//
+//        if (filteredMonsters.isEmpty) {
+//            //viewModel.getMonsters("")
+//            print("Filteed monsters is empty")
+//        }
+    }
     
 }
 
 extension MonsterSearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return monsters.count // TEST
         return viewModel.monsters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MonsterTableCell.identifier, for: indexPath) as! MonsterTableCell
         
-        cell.monster = viewModel.monsters[indexPath.row]
+        let monsters = viewModel.monsters
+        
+        cell.monster = monsters[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        //TODO: show monster deatils
     }
     
     
@@ -77,6 +101,24 @@ extension MonsterSearchViewController: ViewModelDelegate {
             self.monsterTableView.reloadData()
         }
     }
+}
+
+//MARK: Search Bar Delegate extension
+extension MonsterSearchViewController: UISearchBarDelegate, UISearchResultsUpdating {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let search = searchBar.text,
+            let sanitized = search.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+
+        viewModel.getMonsters(sanitized)
+        //filter(with: sanitized)
+    }
     
-    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let search = searchController.searchBar.text,
+            let sanitized = search.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        
+        viewModel.getMonsters(sanitized)
+        //filter(with: sanitized)
+        
+    }
 }

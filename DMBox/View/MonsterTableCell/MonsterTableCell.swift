@@ -31,6 +31,8 @@ class MonsterTableCell: UITableViewCell {
     override func layoutSubviews() {
         crTitleLabel.adjustsFontSizeToFitWidth = false
         crTitleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        crNumLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        crNumLabel.adjustsFontSizeToFitWidth = true
         nameLabel.adjustsFontSizeToFitWidth = false
         nameLabel.lineBreakMode = NSLineBreakMode.byTruncatingTail
         descripLabel.adjustsFontSizeToFitWidth = false

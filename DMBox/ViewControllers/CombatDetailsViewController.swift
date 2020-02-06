@@ -72,7 +72,7 @@ extension CombatDetailsViewController: UITableViewDelegate, UITableViewDataSourc
         case 0:
             return viewModel.dummyCombatList[currentCombat].players.count
         case 1:
-            return 1 // TODO: Allies section
+            return viewModel.dummyCombatList[currentCombat].allies.count
         case 2:
             return viewModel.dummyCombatList[currentCombat].enemies.count
             // return viewModel this combat's saved list of monsters
