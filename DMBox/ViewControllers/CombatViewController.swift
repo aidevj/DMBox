@@ -10,8 +10,8 @@ import UIKit
 
 class CombatViewController: UIViewController {
     
-    @IBOutlet weak var addMonsterButton: UIButton!
-    @IBOutlet weak var addPlayerButton: UIButton!
+    //@IBOutlet weak var addMonsterButton: UIButton!
+    //@IBOutlet weak var addPlayerButton: UIButton!
     @IBOutlet weak var combatsTableView: UITableView!
     
     var viewModel: ViewModel!
@@ -76,6 +76,7 @@ extension CombatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
         
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "CombatDetailsViewController") as! CombatDetailsViewController

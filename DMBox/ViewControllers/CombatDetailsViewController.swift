@@ -100,8 +100,6 @@ extension CombatDetailsViewController: UITableViewDelegate, UITableViewDataSourc
             
             let monster = viewModel.dummyCombatList[currentCombat].enemies[indexPath.row]
             
-            // TODO: turn off + button in this view, toggle or otherwise make a different reusable table cell for monsters to be used in thsi view specifically
-            
             cell.monster = monster
             return cell
         default:
@@ -122,7 +120,8 @@ extension CombatDetailsViewController: UITableViewDelegate, UITableViewDataSourc
         }
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

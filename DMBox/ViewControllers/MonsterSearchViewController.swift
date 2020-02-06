@@ -26,8 +26,8 @@ class MonsterSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        getData()
         setupSearch()
+        getData()
     }
     
     // MARK: Setup Functions
@@ -35,6 +35,7 @@ class MonsterSearchViewController: UIViewController {
         monsterTableView.register(UINib(nibName: MonsterTableCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: MonsterTableCell.identifier)
         monsterTableView.tableFooterView = UIView(frame: .zero)
         monsterTableView.backgroundColor = .none
+        monsterTableView.separatorStyle = .none
         
         viewModel.delegate = self
     }
@@ -70,7 +71,7 @@ class MonsterSearchViewController: UIViewController {
     
 }
 
-extension MonsterSearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension MonsterSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.monsters.count
     }
@@ -82,15 +83,31 @@ extension MonsterSearchViewController: UITableViewDelegate, UITableViewDataSourc
         
         cell.monster = monsters[indexPath.row]
         
+        // add + button
+        
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+}
+
+extension MonsterSearchViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
         
-        //TODO: show monster deatils
+        // To Monster Detail View
+        
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "MonsterDetailsViewController") as! MonsterDetailsViewController
+        nextVC.viewModel = viewModel
+        let monster = viewModel.monsters[indexPath.row]
+        viewModel.currentMonster = monster
+        
+        nextVC.hidesBottomBarWhenPushed = true
+        navigationController?.view.backgroundColor = .none
+        navigationController?.pushViewController(nextVC, animated: true)
     }
-    
     
 }
 

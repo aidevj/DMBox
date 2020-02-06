@@ -20,7 +20,7 @@
                         <rect key="frame" x="14" y="14" width="292" height="47"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="O1g-x2-W7F">
-                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="47"/>
+                                <rect key="frame" x="0.0" y="0.0" width="220.5" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Aboleth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIs-UH-3SN">
                                         <rect key="frame" x="0.0" y="0.0" width="59.5" height="23"/>
@@ -29,41 +29,38 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abberation | Large | Lawful Evil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoA-RY-1bF">
-                                        <rect key="frame" x="0.0" y="29" width="152.5" height="18"/>
+                                        <rect key="frame" x="0.0" y="29" width="212.5" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="152.5" id="ANW-DH-YVJ"/>
-                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZPv-w7-g65">
-                                <rect key="frame" x="207.5" y="0.0" width="11.5" height="47"/>
+                                <rect key="frame" x="275.5" y="0.0" width="16.5" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="CR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rk-b3-ewQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="11.5" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="16.5" height="26.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16.5" id="ksk-gl-GPB"/>
+                                            <constraint firstAttribute="height" constant="26.5" id="txi-5H-HvR"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eA2-op-Mpg">
-                                        <rect key="frame" x="0.0" y="26.5" width="11.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="26.5" width="16.5" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="PA4-HF-zKW"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg9-89-ABQ">
-                                <rect key="frame" x="274" y="0.0" width="18" height="47"/>
-                                <state key="normal" image="plus" catalog="system"/>
-                            </button>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="ZPv-w7-g65" firstAttribute="leading" relation="lessThanOrEqual" secondItem="O1g-x2-W7F" secondAttribute="trailing" constant="55" id="ppv-hy-jfg"/>
-                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
@@ -84,7 +81,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="122.87946428571428"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="plus" catalog="system" width="64" height="56"/>
-    </resources>
 </document>

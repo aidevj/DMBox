@@ -27,11 +27,9 @@ class ViewModel {
         }
     }
     
-    var currentPlayerCharacter: PlayerCharacter! {
-        didSet {
-            
-        }
-    }
+    var currentMonster: Monster!
+    
+    var currentPlayerCharacter: PlayerCharacter!
     
     //MARK: TESTING DATA
     var dummyCombatList = [Combat]() {

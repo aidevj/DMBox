@@ -33,7 +33,7 @@ struct DndAPI {
     // For use when searching through monsters
     var monsterURL: URL? {
         guard let query = searchTerm else { return nil }
-        print("Search URL:" + base + "/monsters" + search + query)
+        //print("Search URL:" + base + "/monsters" + search + query)
         return URL(string: base + "/monsters" + search + query)
     }
     
